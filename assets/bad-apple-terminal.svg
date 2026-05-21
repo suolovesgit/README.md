@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Terminal-style ASCII Bad Apple preview</title>
+  <desc id="desc">A Y2K terminal mockup showing an ASCII animation slot for Bad Apple.</desc>
+  <defs>
+    <linearGradient id="shell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff3fb"/>
+      <stop offset=".5" stop-color="#ffd6ef"/>
+      <stop offset="1" stop-color="#d6c7ff"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff8a2b"/>
+      <stop offset=".55" stop-color="#ff66c7"/>
+      <stop offset="1" stop-color="#8b4dff"/>
+    </linearGradient>
+    <filter id="drop" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="10" dy="10" stdDeviation="0" flood-color="#2b183f" flood-opacity=".22"/>
+    </filter>
+    <style>
+      .ink { fill: #2b183f; }
+      .mono { font-family: Consolas, "Courier New", monospace; font-weight: 700; }
+      .frame { animation: swap 1.8s steps(1, end) infinite; }
+      .frame.b { opacity: 0; animation-delay: .6s; }
+      .frame.c { opacity: 0; animation-delay: 1.2s; }
+      .scan { animation: scan 2.4s linear infinite; }
+      @keyframes swap {
+        0%, 32% { opacity: 1; }
+        33%, 100% { opacity: 0; }
+      }
+      @keyframes scan {
+        from { transform: translateY(-60px); opacity: .05; }
+        50% { opacity: .18; }
+        to { transform: translateY(430px); opacity: .05; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .frame, .scan { animation: none; }
+        .frame.b, .frame.c { opacity: 0; }
+      }
+    </style>
+  </defs>
+  <rect width="920" height="520" rx="34" fill="url(#shell)"/>
+  <g filter="url(#drop)">
+    <rect x="34" y="34" width="852" height="452" rx="18" fill="#140f1f" stroke="#2b183f" stroke-width="6"/>
+    <rect x="34" y="34" width="852" height="54" rx="18" fill="url(#bar)" stroke="#2b183f" stroke-width="6"/>
+    <path d="M34 72h852" stroke="#2b183f" stroke-width="6"/>
+    <circle cx="68" cy="61" r="10" fill="#ffd76d" stroke="#2b183f" stroke-width="4"/>
+    <circle cx="102" cy="61" r="10" fill="#ff66c7" stroke="#2b183f" stroke-width="4"/>
+    <circle cx="136" cy="61" r="10" fill="#58c7ff" stroke="#2b183f" stroke-width="4"/>
+    <text x="172" y="67" class="mono" font-size="20" fill="#fff7fb">bad-apple-ascii.exe</text>
+    <text x="56" y="122" class="mono" font-size="18" fill="#ffd76d">$ ./play --mode ascii --full</text>
+    <text x="56" y="154" class="mono" font-size="15" fill="#ffb3df">render slot: replace this SVG with assets/bad-apple-terminal.gif</text>
+    <rect x="54" y="180" width="812" height="276" rx="10" fill="#07050c" stroke="#8b4dff" stroke-width="3"/>
+    <rect class="scan" x="54" y="190" width="812" height="56" fill="#ffffff"/>
+    <g class="frame a mono" font-size="14" fill="#fff7fb">
+      <text x="78" y="218">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%###########################</text>
+      <text x="78" y="240">@@@@@@@@@@@@@@@@@@@@@@@%%%%%%#####***********########%%%%%%%%%%%%%%%%%</text>
+      <text x="78" y="262">@@@@@@@@@@@@@@@@@@@%%%%####****++++===========++++****#####%%%%%%%%%%%</text>
+      <text x="78" y="284">@@@@@@@@@@@@@@@%%%%###***++==---:::::::::::::---==++***####%%%%%%%%%%</text>
+      <text x="78" y="306">@@@@@@@@@@@@%%%%###**++=--::::......      ......::::--=++**###%%%%%%%</text>
+      <text x="78" y="328">@@@@@@@@@@%%%###**+=--:::....                  ....::--=+**###%%%%%%%</text>
+      <text x="78" y="350">@@@@@@@%%%%###**+=--:::...      BAD APPLE        ...::--=+**###%%%%%%</text>
+      <text x="78" y="372">@@@@@@%%%%###**+=--:::....      ASCII MODE      ....::--=+**###%%%%%%</text>
+      <text x="78" y="394">@@@@@@@%%%%###**++=--:::....                  ....::--=+**###%%%%%%%</text>
+      <text x="78" y="416">@@@@@@@@@@%%%%###**++=---::::..............::::---=++**###%%%%%%%%%%</text>
+    </g>
+    <g class="frame b mono" font-size="14" fill="#fff7fb">
+      <text x="78" y="218">%%%%%%##########################%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="240">%%%%%########***********#####%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="262">%%%####****++++==========+++****####%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="284">%%###***++==---:::::::::::---==++***###%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="306">%###**++=--:::....      ....:::--=++**###%%%%@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="328">%###**+=--::...              ...::--=+**###%%%%@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="350">%%###**+=--::...   SOURCE VIDEO   ...::--=+**###%%%%@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="372">%%%%###**+=--::...  GOES HERE    ...::--=+**###%%%%@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="394">%%%%%%###**+=--:::....      ....:::--=+**###%%%%@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="416">%%%%%%%%###**++=---:::::::::::---=++**###%%%%@@@@@@@@@@@@@@@@@@@@@@@</text>
+    </g>
+    <g class="frame c mono" font-size="14" fill="#fff7fb">
+      <text x="78" y="218">.........:::::::-----=====+++++*****#####%%%%%%%@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="240">......:::::-----=====+++++*****#####%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="262">....::::----====++++*****#####%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="284">...:::---===+++****####%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</text>
+      <text x="78" y="306">..::--==++***###%%%%%%%@@@@@@@@@@@@@@@%%%%%%%#####****+++==--::.....</text>
+      <text x="78" y="328">.::-==+**##%%%%@@@@@@@@@@@@@@@@@@@%%%%%####****+++==--:::...........</text>
+      <text x="78" y="350">.:-=+*##%%%@@@@     FULL RENDER      @@@%%%###**++=--::.............</text>
+      <text x="78" y="372">.:-=+*##%%%@@@@     COMING SOON      @@@%%%###**++=--::.............</text>
+      <text x="78" y="394">.::-==+**##%%%%@@@@@@@@@@@@@@@@@@@%%%%%####****+++==--:::...........</text>
+      <text x="78" y="416">..::--==++***###%%%%%%%@@@@@@@@@@@@@@@%%%%%%%#####****+++==--::.....</text>
+    </g>
+    <text x="56" y="474" class="mono" font-size="14" fill="#58c7ff">github readme safe: animated image, no javascript, no embedded terminal runtime</text>
+  </g>
+</svg>
